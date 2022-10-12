@@ -87,9 +87,9 @@ n_jobs = -1
 
 for probe, tempgen in tempgens.items():
     if drifting:    
-        filename = f"recordings_{probe}_noisy_drifting.h5"
+        filename = f"recordings_{probe}_drifting.h5"
     else:
-        filename = f"recordings_{probe}_nonoise_static.h5"
+        filename = f"recordings_{probe}_static.h5"
 
     if erase or not os.path.exists(filename):
         recgen = mr.gen_recordings(params=recordings_params, tempgen=tempgen, 
